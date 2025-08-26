@@ -277,9 +277,11 @@ This project makes use of different python libraries that can be installed using
 
 7. **AI agent usage**
 
+    To have the model available download the zipped file from the release section, then unzip it in the project's directory
     To obtain an SQL query  starting from natural language, type your prompt on the query editor, then press "Ask AI" to make the model elaborate your request and generate a query.
 
-8. **Results export to JSON format**
+9. **Results export to JSON format**
 
     After the execution of a query and the visualization of its results, click on the "Export to Josn" button, you will be able to save the results of the query as a `.json` file
+
 
