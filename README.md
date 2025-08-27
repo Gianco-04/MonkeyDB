@@ -1,4 +1,3 @@
-
 # MonkeyDB DATABASE MANAGER
 
 **App creator: Marco Giancola**
@@ -128,11 +127,11 @@ The datasets were red as follow:
     dataset = Dataset.from_pandas(data_file)
         
 
-Before the training, data pass through the `preprocessing()` function:
+Before the training, data pass through the `process_data()` function:
 
     python
 
-    def preprocessing(example):
+    def process_data(example):
     input_enc = tokenizer("Translate from English to SQL: " + example["input_text"], truncation=True, padding="max_length", max_length=128)
     target_enc = tokenizer(example["target_text"], truncation=True, padding="max_length", max_length=128)
     return {
@@ -159,9 +158,9 @@ Finally the data are processed with
 
     python
     
-    tokenized = dataset.map(preprocessing)
+    tokenized = dataset.map(process_data)
 
-This applies `preprocessing()` to each example in the dataset, producing a tokenized dataset ready for the training process
+This applies `process_data()` to each example in the dataset, producing the tokenized dataset ready for the training process
 
 In the second training session I focused more on making the model understand how to derive the db scherma from the nl prompt.
 Both training sessions has been performed using google colab, to exploit a GPU (T4 Tesla).
@@ -283,5 +282,4 @@ This project makes use of different python libraries that can be installed using
 9. **Results export to JSON format**
 
     After the execution of a query and the visualization of its results, click on the "Export to Josn" button, you will be able to save the results of the query as a `.json` file
-
 
