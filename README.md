@@ -234,7 +234,7 @@ This project makes use of different python libraries that can be installed using
     Navigate through the project's directory in your terminal and execute the main script
 
         bash
-        python db_manager.py
+        python main.py
 
     The application will run and you will visualize the login window
 3. **User authentication**
@@ -282,4 +282,5 @@ This project makes use of different python libraries that can be installed using
 9. **Results export to JSON format**
 
     After the execution of a query and the visualization of its results, click on the "Export to Josn" button, you will be able to save the results of the query as a `.json` file
+
 
